@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Health App</string>
+    <string name="history_item">履歴</string>
+    <string name="search">Search</string>
+    <string name="search_txt">Search</string>
+    <string name="click">Click</string>
+    <string name="search_text">検索</string>
+    <string name="search_action">Search</string>
+    <string name="back">戻る</string>
+
+</resources>
