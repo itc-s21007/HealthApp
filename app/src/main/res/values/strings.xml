@@ -7,5 +7,6 @@
     <string name="search_text">検索</string>
     <string name="search_action">Search</string>
     <string name="back">戻る</string>
-
+    <string name="register_item">登録</string>
+    <string name="message">日時、食べ物、カロリー\nを登録してね</string>
 </resources>

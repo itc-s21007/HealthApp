@@ -4,4 +4,11 @@
 
     <item android:id="@+id/history"
           android:title="@string/history_item" />
+
+    <item
+        android:id="@+id/register"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="@string/register_item"
+        app:showAsAction="ifRoom" />
+
 </menu>

@@ -22,7 +22,11 @@ class HistoryActivity : AppCompatActivity() {
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val data = mutableListOf("12月7日","N月N日","N月N日","N月N日","N月N日",)
+        val day = intent.getStringExtra("data_list")
+
+
+        val data = mutableListOf(day.toString())
+        //val data = mutableListOf("12月２０日")
 
         // ListView にdataを表示
         binding.historyList.adapter = ArrayAdapter(
