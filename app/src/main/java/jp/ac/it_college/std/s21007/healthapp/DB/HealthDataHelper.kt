@@ -1,4 +1,4 @@
-package jp.ac.it_college.std.s21007.healthapp
+package jp.ac.it_college.std.s21007.healthapp.DB
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
@@ -8,17 +8,19 @@ import java.sql.SQLException
 class HealthDataHelper(context: Context?) : SQLiteOpenHelper(context, DBNAME, null, VERSION){
 
     companion object{
-        private const val DBNAME = "date.sqlite"
+        private const val DBNAME = "HealthData"
         private const val VERSION= 1
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
         db?.let {
-            it.execSQL("CREATE TABLE DATE("+"IdDate TEXT PRIMARY KEY, Date TEXT)")
+            it.execSQL("CREATE TABLE DATE("+"IdDate INTEGER PRIMARY KEY, Date TEXT)")
+
 
             val data = listOf(
-                mapOf("IdDate" to "1", "Date" to "12月15日")
+                mapOf("IdDate" to "1", "Date" to "１２月１５日"),
             )
+
 
             it.beginTransaction()
             try {
@@ -26,7 +28,7 @@ class HealthDataHelper(context: Context?) : SQLiteOpenHelper(context, DBNAME, nu
                     "INSERT INTO DATE(IdDate, Date) VALUES(?,?)"
                 )
                 data.forEach { it ->
-                    sql.bindString(1, it["DATE"])
+                    sql.bindString(1, it["IdDate"])
                     sql.bindString(2, it["Date"])
                     sql.executeInsert()
                 }

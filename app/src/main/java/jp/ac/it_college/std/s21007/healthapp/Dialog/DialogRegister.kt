@@ -1,16 +1,14 @@
-package jp.ac.it_college.std.s21007.healthapp
+package jp.ac.it_college.std.s21007.healthapp.Dialog
 
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.Dialog
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import jp.ac.it_college.std.s21007.healthapp.R
 import java.util.Calendar
 
 class DialogRegister : DialogFragment() {
@@ -22,7 +20,6 @@ class DialogRegister : DialogFragment() {
     private var callback: DataCallBack? = null
 
     override fun onCreateDialog(savedInstanceStart: Bundle?): Dialog {
-
 
         val text = EditText(context)
 
@@ -57,6 +54,7 @@ class DialogRegister : DialogFragment() {
                         .show()
                 }
             }.create()
+
 
         }
         return dialog ?: throw IllegalStateException(" Activity is null ")
